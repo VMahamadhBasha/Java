@@ -1,0 +1,33 @@
+import java.util.Scanner;
+/*public class Main{
+public static void main(String[] args) {
+
+    int a,b;
+    Scanner sc=new Scanner(System.in);
+    a = sc.nextInt();
+    b= sc.nextInt();
+    if(a>b){
+        System.out.println("a > b");
+    }
+    else{
+        if(a<b){
+        System.out.println("a < b");
+    }
+   
+    else{
+        System.out.println("a == b");
+    }
+   
+   
+    
+}} }*/
+public class Main{
+public static void main(String[] args) {
+
+    int a;
+    Scanner sc=new Scanner(System.in);
+    a = sc.nextInt();
+    int res= ((3*10)+a)*10+3;
+    System.out.println(res);
+}
+}
