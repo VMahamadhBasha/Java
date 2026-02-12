@@ -1,0 +1,287 @@
+    OOPS in Java – Interview Questions & Answers (HR Perspective)
+
+1️⃣ Object-Oriented Programming (OOPS) – Basics
+    Q1. What is OOPS?
+    Answer:
+    OOPS (Object-Oriented Programming System) is a programming paradigm that organizes code using objects and classes, focusing on real-world entities.
+    Java follows OOPS to make programs modular, reusable, secure, and easy to maintain.
+
+    Q2. What are the main principles of OOPS?
+    Answer:
+    The four main principles are:
+    Encapsulation
+    Inheritance
+    Polymorphism
+    Abstraction
+
+    2️⃣ Class and Object
+    Q1. What is a Class?
+    Answer:
+    A class is a blueprint or template used to create objects.
+    It defines variables (data members) and methods (behavior).
+    Example:
+    class Car {
+        String color;
+        void drive() {
+            System.out.println("Car is moving");
+        }
+    }
+
+
+    Q2. What is an Object?
+    Answer:
+    An object is an instance of a class.
+    It represents a real-world entity and occupies memory.
+    Example:
+    Car c = new Car();
+
+
+3️⃣ Encapsulation
+    Q1. What is Encapsulation?
+    Answer:
+    Encapsulation is the process of wrapping data and methods together into a single unit (class) and hiding data using access modifiers.
+
+    Q2. How do you achieve Encapsulation in Java?
+    Answer:
+    By:
+
+
+    Declaring variables as private
+
+
+    Providing public getter and setter methods
+
+
+    Example:
+    class Employee {
+        private int salary;
+
+        public int getSalary() {
+            return salary;
+        }
+
+        public void setSalary(int salary) {
+            this.salary = salary;
+        }
+    }
+
+
+4️⃣ Inheritance
+    Q1. What is Inheritance?
+    Answer:
+    Inheritance allows a class to acquire properties and methods of another class using the extends keyword.
+
+    Q2. Why is Inheritance used?
+    Answer:
+
+
+    Code reusability
+
+
+    Method overriding
+
+
+    Maintainability
+
+
+    Example:
+    class Animal {
+        void eat() {
+            System.out.println("Eating");
+        }
+    }
+
+    class Dog extends Animal {
+        void bark() {
+            System.out.println("Barking");
+        }
+    }
+
+
+5️⃣ Types of Inheritance in Java
+    Q1. What types of inheritance does Java support?
+    Answer:
+    Java supports:
+
+
+    Single
+
+
+    Multilevel
+
+
+    Hierarchical
+
+
+    Java does not support multiple inheritance using classes to avoid ambiguity.
+
+    Q2. How does Java support multiple inheritance?
+    Answer:
+    Using interfaces, not classes.
+
+6️⃣ Polymorphism
+    Q1. What is Polymorphism?
+    Answer:
+    Polymorphism means one method having multiple forms.
+    It allows the same method name to perform different actions.
+
+    Q2. What are the types of Polymorphism?
+    Answer:
+
+
+    Compile-time Polymorphism (Method Overloading)
+
+
+    Runtime Polymorphism (Method Overriding)
+
+
+
+7️⃣ Method Overloading
+    Q1. What is Method Overloading?
+    Answer:
+    Method overloading allows multiple methods with the same name but different parameters in the same class.
+
+    Q2. Can we overload methods by changing return type only?
+    Answer:
+    ❌ No.
+    Method overloading depends on method signature, not return type.
+    Example:
+    int add(int a, int b) {}
+    double add(double a, double b) {}
+
+
+    8️⃣ Method Overriding
+    Q1. What is Method Overriding?
+    Answer:
+    Method overriding occurs when a child class provides a specific implementation of a method already defined in the parent class.
+
+    Q2. What rules must be followed in method overriding?
+    Answer:
+
+
+    Same method name
+
+
+    Same parameters
+
+
+    IS-A relationship
+
+
+    Cannot reduce access level
+
+
+    Example:
+    class Parent {
+        void show() {
+            System.out.println("Parent");
+        }
+    }
+
+    class Child extends Parent {
+        void show() {
+            System.out.println("Child");
+        }
+    }
+
+
+    9️⃣ Abstraction
+    Q1. What is Abstraction?
+    Answer:
+    Abstraction hides implementation details and shows only essential features to the user.
+
+    Q2. How do you achieve Abstraction in Java?
+    Answer:
+    By using:
+
+
+    Abstract classes
+
+
+    Interfaces
+
+
+
+    🔟 Abstract Class
+    Q1. What is an Abstract Class?
+    Answer:
+    An abstract class is a class declared using the abstract keyword and may contain abstract and non-abstract methods.
+
+    Q2. Can we create an object of an abstract class?
+    Answer:
+    ❌ No.
+    But we can create a reference of an abstract class.
+    Example:
+    abstract class Shape {
+        abstract void draw();
+    }
+
+
+    1️⃣1️⃣ Interface
+    Q1. What is an Interface?
+    Answer:
+    An interface is a blueprint that contains only abstract methods (before Java 8) and constants.
+
+    Q2. Difference between Abstract Class and Interface?
+    Answer:
+    FeatureAbstract ClassInterfaceMethodsAbstract + concreteAbstract (default/static allowed)InheritanceextendsimplementsMultiple inheritance❌✅
+
+    1️⃣2️⃣ Constructors
+    Q1. What is a Constructor?
+    Answer:
+    A constructor is a special method used to initialize objects.
+    It has the same name as the class.
+
+    Q2. Can constructors be inherited?
+    Answer:
+    ❌ No, constructors cannot be inherited.
+
+    1️⃣3️⃣ this and super Keywords
+    Q1. What is this keyword?
+    Answer:
+    this refers to the current object.
+
+    Q2. What is super keyword?
+    Answer:
+    super is used to refer to the parent class object or constructor.
+
+    1️⃣4️⃣ Final Keyword
+    Q1. What is the use of final keyword?
+    Answer:
+
+
+    final variable → constant
+
+
+    final method → cannot override
+
+
+    final class → cannot inherit
+
+
+
+    Q2. Can a constructor be final?
+    Answer:
+    ❌ No, constructors cannot be final.
+
+    1️⃣5️⃣ Object Class
+    Q1. What is Object class in Java?
+    Answer:
+    Object is the parent class of all Java classes.
+
+    Q2. Important methods of Object class?
+    Answer:
+
+
+    toString()
+
+
+    equals()
+
+
+    hashCode()
+
+
+    clone()
+
+
